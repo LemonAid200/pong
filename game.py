@@ -22,7 +22,6 @@ pygame.display.set_caption("PONG")
 clock = pygame.time.Clock()
 sound = pygame.mixer.Sound('click.wav')
 fail = pygame.mixer.Sound('fail.wav')
-pygame.mixer.music.load('music.wav')
 
 x = winX/2
 y = winY/2
@@ -92,14 +91,7 @@ while(run):
     if keys[pygame.K_s]:
         if (Player1 < winY -150):
             Player1+=playerSpeed
-    if keys[pygame.K_m]:
-        if flag:
-           pygame.mixer.music.play()
-           flag=False
-        else:
-           pygame.mixer.music.pause()
-           flag=True
-           tupa+=15
+   
   
     if keys[pygame.K_v]:
         if (winX == 1000):
